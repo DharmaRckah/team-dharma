@@ -1,18 +1,31 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { ThemeProvider } from './ThemContext.jsx'
+import Self from './Self'
+import Counter from './Reduce.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [n , setN] = useState("")
+
+
+
+function changer(){
+  setN("Dharmendra")
+}
+
+
+
 
   return (
-   <>
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-   
-   </>
+  //  <ThemeProvider>
+  //  <Self/>
+  //  </ThemeProvider>
+  <>
+  <Counter/>
+  </>
   )
 }
 
